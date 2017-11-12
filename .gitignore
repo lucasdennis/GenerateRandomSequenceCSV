@@ -1,0 +1,5 @@
+#ignore mac and intellij specific stuff
+.DS_Store
+*.iml
+.idea
+/out/
