@@ -25,22 +25,20 @@ public class CreateFileLauncher {
         writeToFile(output);
     }
 
-    private static char coinFlilp(){
+    private static char coinFlip(){
         Random r = new Random();
         final int heads = 0;
         final int bound = 2;
         int result = r.nextInt(bound);
-        if(result == heads){
-            return 'A';
-        }
-        return 'B';
+        final char baseChar = 'A';
+        return (char) (baseChar + result);
     }
 
     private static String getSequence(){
         final int sequenceLength = 6;
         String retVal = "";
         for (int i = 0; i < sequenceLength; i++) {
-            retVal += coinFlilp();
+            retVal += coinFlip();
         }
         return retVal;
     }
